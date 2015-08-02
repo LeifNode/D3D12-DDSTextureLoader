@@ -6,7 +6,7 @@ Port of the Microsoft DDSTextureLoader to support the Direct3D 12 runtime. The o
 
 ### Functionality
 
-The functionality is the same as the original DDSTextureLoader except it does not currently support automatic mip-mapping.
+The functionality is the same as the original DDSTextureLoader except that it does not currently support automatic mip-mapping so mipmaps will need to be generated in an external tool.
 
 * Supports loading DDS textures with mip-maps
 * Supports most color formats

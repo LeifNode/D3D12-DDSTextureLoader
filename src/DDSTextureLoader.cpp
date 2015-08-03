@@ -921,9 +921,9 @@ static HRESULT CreateD3DResources(_In_ ID3D12Device* d3dDevice,
 	{
 	case D3D12_RESOURCE_DIMENSION_TEXTURE1D:
 	{
-		desc.Width = static_cast<UINT>(width);
-		desc.MipLevels = static_cast<UINT>(mipCount);
-		desc.DepthOrArraySize = static_cast<UINT>(arraySize);
+		desc.Width = static_cast<UINT64>(width);
+		desc.MipLevels = static_cast<UINT16>(mipCount);
+		desc.DepthOrArraySize = static_cast<UINT16>(arraySize);
 		desc.Format = format;
 
 		hr = d3dDevice->CreateCommittedResource(
@@ -973,10 +973,10 @@ static HRESULT CreateD3DResources(_In_ ID3D12Device* d3dDevice,
 	case D3D12_RESOURCE_DIMENSION_TEXTURE2D:
 	{
 		desc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
-		desc.Width = static_cast<UINT>(width);
+		desc.Width = static_cast<UINT64>(width);
 		desc.Height = static_cast<UINT>(height);
-		desc.MipLevels = static_cast<UINT>(mipCount);
-		desc.DepthOrArraySize = static_cast<UINT>(arraySize);
+		desc.MipLevels = static_cast<UINT16>(mipCount);
+		desc.DepthOrArraySize = static_cast<UINT16>(arraySize);
 		desc.Format = format;
 
 
@@ -1043,10 +1043,10 @@ static HRESULT CreateD3DResources(_In_ ID3D12Device* d3dDevice,
 
 	case D3D12_RESOURCE_DIMENSION_TEXTURE3D:
 	{
-		desc.Width = static_cast<UINT>(width);
+		desc.Width = static_cast<UINT64>(width);
 		desc.Height = static_cast<UINT>(height);
-		desc.DepthOrArraySize = static_cast<UINT>(depth);
-		desc.MipLevels = static_cast<UINT>(mipCount);
+		desc.DepthOrArraySize = static_cast<UINT16>(depth);
+		desc.MipLevels = static_cast<UINT16>(mipCount);
 		desc.Format = format;
 
 		hr = d3dDevice->CreateCommittedResource(

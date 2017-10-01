@@ -1,5 +1,8 @@
 # D3D12-DDSTextureLoader
 
+## No longer works due to updates to the DirectX 12 API that prevent this method of texture creation. 
+## There is now official support for DirectX12 in [DirectXTex's DDSTextureLoader12](https://github.com/Microsoft/DirectXTex/tree/master/DDSTextureLoader)
+
 Light-weight runtime DDS file loader for Direct3D 12.
 
 Port of the Microsoft DDSTextureLoader to support the Direct3D 12 runtime. The original version for Direct3D 11 can be found at https://github.com/Microsoft/DirectXTex
